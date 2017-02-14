@@ -1,0 +1,33 @@
+{
+  "name": "slc-day-2",
+  "version": "1.0.0",
+  "description": "Task for self-learning clinic day two",
+  "main": "cliAPI/app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "reverse": "jasmine tests/reverseString.js",
+    "words": "jasmine tests/wordCount.js",
+    "start": "node cliAPI/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajudensi/SLC-Day-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajudensi/SLC-Day-2/issues"
+  },
+  "homepage": "https://github.com/ajudensi/SLC-Day-2#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "cli-table": "^0.3.1",
+    "colors": "^1.1.2",
+    "request": "^2.79.0"
+  }
+}
