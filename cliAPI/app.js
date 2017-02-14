@@ -1,14 +1,14 @@
+'use strict';
+
 const request = require('request');
 const cheerio = require('cheerio');
 const readLine = require('readline');
 const colors = require('colors');
 const Table = require('cli-table');
 
-
-let defaultUrl = 'http://www.imdb.com/title/tt3521164/';
+const defaultUrl = 'http://www.imdb.com/title/tt3521164/';
 
 const rl = readLine.createInterface({ input: process.stdin, output: process.stdout });
-
 
 console.log(colors.bgBlue('\n Enter an IMDB movie url below to fetch information '));
 console.log(colors.blue('\nThe url look like this: http://www.imdb.com/title/tt3521164/'));
@@ -46,12 +46,6 @@ rl.question(colors.grey(' Enter an IMDB movie url: '), function (enteredUrl) {
         const data = $('.poster a img');
         const poster = data.attr('src');
         json.poster = poster;
-      });
-
-      $('.slate').filter(function () {
-        const data = $('.slate a img');
-        const trailer = data.attr('src');
-        json.trailer = trailer;
       });
 
       const table = new Table({
